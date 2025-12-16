@@ -2,7 +2,8 @@ const side = document.querySelector('.side-bar');
 const menuBtn = document.getElementById('open'); 
 const closeBtn = document.getElementById('close'); 
 const btnSlide = document.getElementById('btnslide');
-const btnLogin = document.getElementById('btnlogin');
+const btnLogin1 = document.getElementById('btnlogin1');
+const btnLogin2 = document.getElementById('btnlogin2');
 if (menuBtn && side) {
     menuBtn.addEventListener('click', () => {
         side.classList.toggle('translate-x-full');
@@ -28,9 +29,17 @@ if (menuBtn && navMenu) {
     });
 }
 
-if(btnLogin)
+if(btnLogin1)
 {
-    btnLogin.addEventListener('click', ()=>{
+    btnLogin1.addEventListener('click', ()=>{
+       alert("clicked");
+        window.location.href = "/pageaccount";
+    });
+}
+
+if(btnLogin2)
+{
+    btnLogin2.addEventListener('click', ()=>{
         window.location.href = "/pageaccount";
     });
 }

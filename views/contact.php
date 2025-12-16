@@ -42,7 +42,6 @@
         </form>
     </div>
 </div>
-
     <?php include __DIR__ . "/../templates/footer.php" ?>
     <script src="/Scripts/script.js"></script>
 </body>

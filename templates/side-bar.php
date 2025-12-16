@@ -12,5 +12,7 @@
         <li><a href="/service" class="underline-non">Services</a></li>
         <li><a href="/about" class="underline-non">About Us</a></li>
         <li><a href="/contact" class="underline-non">Contact</a></li>
+        <button type="button" id="btnlogin2" class="p-2 bg-blue-500">Login</button>
     </ul>
+    
 </div>

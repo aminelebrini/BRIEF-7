@@ -19,8 +19,7 @@
     </div>
     <img src="../images/—Pngtree—vector about us images_16023330.png" class="md:w-[450px] md:h-[450px]" alt="bg">
 </div>
-<?php include __DIR__ . "/../templates/footer.php" ?>
+    <?php include __DIR__ . "/../templates/footer.php" ?>
     <script src="/Scripts/script.js"></script>
-
 </body>
 </html>

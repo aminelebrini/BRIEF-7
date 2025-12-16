@@ -12,6 +12,6 @@
             <li><a href="/about" class="underline-non">About Us</a></li>
             <li><a href="/contact" class="underline-non">Contact</a></li>
         </ul>
-        <button type="button" id="btnlogin">Login</button>
+        <button type="button" id="btnlogin1" class="btnlogin p-2 bg-blue-500 hidden md:block">Login</button>
     </nav>
 </header>
