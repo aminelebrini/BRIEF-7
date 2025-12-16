@@ -11,7 +11,7 @@
 <body>
     <?php include __DIR__ . "/../controllers/loginValidation.php" ?>
     <?php include __DIR__ . "/../controllers/signUpvalidation.php" ?>
-    <div class="signupform">
+    <div class="signupform hidden" id="signupform">
             <h1>SIgn-Up</h1>
         <form method="POST">
             <div class="div flex flex-col">
@@ -35,13 +35,13 @@
             </div>
             <div class="divfor flex flex-col">
                 <a>Forget Password</a>
-                <a>You don't have an account? You can create an account.</a>
+                <a>Do you have an account? You can <a id="creataccount" href="#">Log-in</a></a>
             </div>
             <button type="submit">Sign-up</button>
         </form>
     </div>
 
-    <div class="loginform hidden">
+    <div class="loginform" id="loginform">
             <h1>Login</h1>
         <form method="POST" action="login">
             <div class="div">
@@ -54,7 +54,7 @@
             </div>
             <div class="divfor">
                 <a>Forget Password</a>
-                <a>You don't have an account? You can <a id="createaccount" href="#">create an account.</a></a>
+                <a>You don't have an account? You can <a id="loginaccount" href="#">create an account.</a></a>
             </div>
             <button type="submit" id="submittbtn">Login</button>
         </form>

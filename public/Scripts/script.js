@@ -4,9 +4,10 @@ const closeBtn = document.getElementById('close');
 const btnSlide = document.getElementById('btnslide');
 const btnLogin1 = document.getElementById('btnlogin1');
 const btnLogin2 = document.getElementById('btnlogin2');
-const CreatBtnAcc = document.getElementById('createaccount');
-const loginForm = document.querySelector('#signupform');
-const signUpForm = document.querySelector('#loginform');
+const LoginBtnAcc = document.getElementById('loginaccount');
+const CreatBtnAcc = document.getElementById('creataccount');
+const signUpForm= document.getElementById('signupform');
+const loginForm = document.getElementById('loginform');
 if (menuBtn && side) {
     menuBtn.addEventListener('click', () => {
         side.classList.toggle('translate-x-full');
@@ -47,4 +48,17 @@ if(btnLogin2)
     });
 }
 
-if
+if(LoginBtnAcc)
+{
+    LoginBtnAcc.addEventListener('click', ()=>{
+        signUpForm.classList.remove('hidden');
+        loginForm.classList.add('hidden');
+    });
+}
+if(CreatBtnAcc)
+{
+    CreatBtnAcc.addEventListener('click', ()=>{
+        loginForm.classList.remove('hidden');
+        signUpForm.classList.add('hidden');
+    });
+}
