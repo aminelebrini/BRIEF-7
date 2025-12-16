@@ -9,16 +9,47 @@
 </head>
 <body>
     <?php include __DIR__ . "/../controllers/loginValidation.php" ?>
-    <div class="loginform">
+    <?php include __DIR__ . "/../controllers/signUpvalidation.php" ?>
+    <div class="signupform">
+            <h1>SIgn-Up</h1>
+        <form method="POST" action="signup">
+            <div class="div flex flex-col">
+                <label for="fullname">EMAIL</label>
+                <input type="text" id="fullname" name="fullname" placeholder="FULL NAME" class="border-2 border-black" required>
+            </div>
+            <div class="div flex flex-col">
+                <label for="email">EMAIL</label>
+                <input type="text" id="email" name="email" placeholder="EMAIL" class="border-2 border-black" required>
+            </div>
+            <div class="div flex flex-col">
+                <label for="url">IMAGE DE PROFILE</label>
+                <div class="img flex flex-col">
+                    <img src="" width="50px" height="50px">
+                    <input type="url" id="url" name="url" class="border-2 border-black" placeholder="URL DE IMAGE">
+                </div>
+            </div>
+            <div class="div flex flex-col">
+                <label for="password">PASSWORD</label>
+                <input type="text" id="password" name="password" class="border-2 border-black" placeholder="PASSWORD" required>
+            </div>
+            <div class="divfor flex flex-col">
+                <a>Forget Password</a>
+                <a>You don't have an account? You can create an account.</a>
+            </div>
+            <button type="submit">Sign-up</button>
+        </form>
+    </div>
+
+    <div class="loginform hidden">
             <h1>Login</h1>
         <form method="POST" action="login">
             <div class="div">
                 <label for="email">EMAIL</label>
-                <input type="text" id="email" name="email" placeholder="EMAIL" required>
+                <input type="text" id="email" name="email" placeholder="EMAIL" class="border-2 border-black" required>
             </div>
             <div class="div">
                 <label for="password">PASSWORD</label>
-                <input type="text" id="password" name="password" placeholder="PASSWORD" required>
+                <input type="text" id="password" name="password" placeholder="PASSWORD" class="border-2 border-black" required>
             </div>
             <div class="divfor">
                 <a>Forget Password</a>
