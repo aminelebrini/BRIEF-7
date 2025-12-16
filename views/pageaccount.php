@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <title>NovaCraft</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
     <?php include __DIR__ . "/../controllers/signUpvalidation.php" ?>
     <div class="signupform">
             <h1>SIgn-Up</h1>
-        <form method="POST" action="signup">
+        <form method="POST">
             <div class="div flex flex-col">
                 <label for="fullname">EMAIL</label>
                 <input type="text" id="fullname" name="fullname" placeholder="FULL NAME" class="border-2 border-black" required>
@@ -53,9 +54,9 @@
             </div>
             <div class="divfor">
                 <a>Forget Password</a>
-                <a>You don't have an account? You can create an account.</a>
+                <a>You don't have an account? You can <a href="#">create an account.</a></a>
             </div>
-            <button type="submit">Login</button>
+            <button type="submit" id="submittbtn">Login</button>
         </form>
     </div>
     <script src="/Scripts/script.js"></script>
