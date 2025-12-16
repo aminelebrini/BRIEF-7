@@ -22,7 +22,7 @@
                 <h1 class="text-2xl text-white"><i class="fas fa-multiply text-2xl"></i> Your account has been successfully created !</h1>
             </div>';
         } else {
-            echo '<div class="popupsucess bg-red-500 p-5 fixed top-20 right-0">
+            echo '<div class="popupsucess bg-red-600 p-5 fixed top-20 right-0">
                 <h1 class="text-2xl text-white"><i class="fas fa-multiply text-2xl"></i> Your account has not been created !</h1>
             </div>';
         }
