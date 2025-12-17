@@ -43,7 +43,7 @@
 
     <div class="loginform" id="loginform">
             <h1>Login</h1>
-        <form method="POST" action="login">
+        <form method="POST">
             <div class="div">
                 <label for="email">EMAIL</label>
                 <input type="text" id="email" name="email" placeholder="EMAIL" class="border-2 border-black" required>
