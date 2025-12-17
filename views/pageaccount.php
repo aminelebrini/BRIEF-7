@@ -1,3 +1,6 @@
+<?php include __DIR__ . "/../controllers/loginValidation.php" ?>
+<?php include __DIR__ . "/../controllers/signUpvalidation.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +12,6 @@
     <title>NovaCraft</title>
 </head>
 <body>
-    <?php include __DIR__ . "/../controllers/loginValidation.php" ?>
-    <?php include __DIR__ . "/../controllers/signUpvalidation.php" ?>
     <div class="signupform hidden" id="signupform">
             <h1>SIgn-Up</h1>
         <form method="POST">
@@ -20,7 +21,7 @@
             </div>
             <div class="div flex flex-col">
                 <label for="email">EMAIL</label>
-                <input type="text" id="email" name="email" placeholder="EMAIL" class="border-2 border-black" required>
+                <input type="email" id="email" name="email" placeholder="EMAIL" class="border-2 border-black" required>
             </div>
             <div class="div flex flex-col">
                 <label for="url">IMAGE DE PROFILE</label>
@@ -31,13 +32,13 @@
             </div>
             <div class="div flex flex-col">
                 <label for="password">PASSWORD</label>
-                <input type="text" id="password" name="password" class="border-2 border-black" placeholder="PASSWORD" required>
+                <input type="password" id="password" name="password" class="border-2 border-black" placeholder="PASSWORD" required>
             </div>
             <div class="divfor flex flex-col">
                 <a>Forget Password</a>
                 <a>Do you have an account? You can <a id="creataccount" href="#">Log-in</a></a>
             </div>
-            <button type="submit">Sign-up</button>
+            <button type="submit" name="signup">Sign-up</button>
         </form>
     </div>
 
@@ -46,17 +47,17 @@
         <form method="POST">
             <div class="div">
                 <label for="email">EMAIL</label>
-                <input type="text" id="email" name="email" placeholder="EMAIL" class="border-2 border-black" required>
+                <input type="email" id="email" name="emaillog" placeholder="EMAIL" class="border-2 border-black" required>
             </div>
             <div class="div">
                 <label for="password">PASSWORD</label>
-                <input type="text" id="password" name="password" placeholder="PASSWORD" class="border-2 border-black" required>
+                <input type="password" id="password" name="passwordlog" placeholder="PASSWORD" class="border-2 border-black" required>
             </div>
             <div class="divfor">
                 <a>Forget Password</a>
                 <a>You don't have an account? You can <a id="loginaccount" href="#">create an account.</a></a>
             </div>
-            <button type="submit" id="submittbtn">Login</button>
+            <button type="submit" id="submittbtn" name="signin">Login</button>
         </form>
     </div>
     <script src="/Scripts/script.js"></script>

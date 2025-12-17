@@ -1,7 +1,7 @@
 <?php
     include __DIR__ . "/../data/connect_db.php";
 
-    if($_SERVER['REQUEST_METHOD'] === 'POST')
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup']))
     {
         $fullname = $_POST['fullname'];
         $email = $_POST['email'];
