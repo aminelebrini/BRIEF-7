@@ -11,6 +11,7 @@
         $user = mysqli_fetch_assoc($resul);
 
         print_r($user);
+        $query = ""
     }
 ?>
 
