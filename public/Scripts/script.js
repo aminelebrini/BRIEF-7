@@ -8,6 +8,8 @@ const LoginBtnAcc = document.getElementById('loginaccount');
 const CreatBtnAcc = document.getElementById('creataccount');
 const signUpForm = document.getElementById('signupform');
 const loginForm = document.querySelector('.loginform');
+const DisplayProf = document.querySelector('.userstab');
+const DachBtn = document.getElementById('dash');
 if (menuBtn && side) {
     menuBtn.addEventListener('click', () => {
         side.classList.toggle('translate-x-full');
@@ -36,7 +38,6 @@ if (menuBtn && navMenu) {
 if(btnLogin1)
 {
     btnLogin1.addEventListener('click', ()=>{
-       alert("clicked");
         window.location.href = "/pageaccount";
     });
 }
@@ -63,3 +64,10 @@ if (CreatBtnAcc) {
     });
 }
 
+if(DachBtn && DisplayProf)
+{
+    DachBtn.addEventListener('click', ()=>{
+        DisplayProf.classList.remove('hidden');
+        DisplayProf.classList.add('block');
+    });
+}
