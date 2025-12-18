@@ -1,3 +1,4 @@
+<?php include __DIR__ . "/../controllers/profileDisplay.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,22 +10,32 @@
     <title>NovaCraft WorkSpace</title>
 </head>
 <body>
-    <header>
+    <header class="bg-[#3C2877] p-3 flex flex-row">
         <h1>NovaCraft</h1>
-        <div>
+        <div class="flex flex-row">
             <h2></h2>
             <img src="" alt="userphoto">
             <button>Log-out</button>
         </div>
     </header>
 
-    <div class="display flex flex-col ">
-        <nav>
+    <div class="display flex flex-col w-full">
+        <nav class="flex flex-row items-center justify-evenly gap-5 mt-2">
             <a href="#">Dashboard</a>
             <a href="#">EMAILS</a>
         </nav>
         <div class="display2">
-            fowjfeogjeoirdgjeeoirjgoijoiegheio
+            <div class="userstab">
+                <?php foreach($Users as $us): ?>
+                    <div class="user flex flex-row items-center justify-center gap-3">
+                        <img src="<?= htmlspecialchars($us['url']) ?>" class="w-[50px] h-[50px]" alt="">
+                        <div>
+                            <h1><?= htmlspecialchars($us['fullname']) ?></h1>
+                            <p><?= htmlspecialchars($us['email']) ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
     </div>
 </body>
