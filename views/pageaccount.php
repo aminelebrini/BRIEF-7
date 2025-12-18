@@ -12,7 +12,7 @@
     <title>NovaCraft</title>
 </head>
 
-<body class="bg-[#3F2A78] min-h-screen flex items-center justify-center">
+<body class="bg-gradient-to-tr from-[#3F2A78] via-[#5A3FB5] to-[#221C33] min-h-screen flex items-center justify-center">
 
 <div id="signupform" class="signupform hidden flex flex-col md:flex-row w-full max-w-7xl mx-auto p-4 md:rounded-br-[20px] md:rounded-tr-[20px] h-[700px]">
 

@@ -15,4 +15,10 @@
 
     $view = __DIR__ . "/../views$page.php";
     require_once $view;
+
+    echo "OK HTACCESS";
 ?>
+
+
+
+
