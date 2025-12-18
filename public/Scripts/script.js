@@ -9,7 +9,9 @@ const CreatBtnAcc = document.getElementById('creataccount');
 const signUpForm = document.getElementById('signupform');
 const loginForm = document.querySelector('.loginform');
 const DisplayProf = document.querySelector('.userstab');
+const DispalyEmail = document.querySelector('.conatcttab');
 const DachBtn = document.getElementById('dash');
+const EmailBtn = document.getElementById('email');
 if (menuBtn && side) {
     menuBtn.addEventListener('click', () => {
         side.classList.toggle('translate-x-full');
@@ -69,5 +71,17 @@ if(DachBtn && DisplayProf)
     DachBtn.addEventListener('click', ()=>{
         DisplayProf.classList.remove('hidden');
         DisplayProf.classList.add('block');
+        DispalyEmail.classList.remove('block');
+        DispalyEmail.classList.add('hidden');
+    });
+}
+
+if(EmailBtn && DispalyEmail)
+{
+    EmailBtn.addEventListener('click', ()=>{
+        DispalyEmail.classList.remove('hidden');
+        DispalyEmail.classList.add('block');
+        DisplayProf.classList.remove('block');
+        DisplayProf.classList.add('hidden');
     });
 }
