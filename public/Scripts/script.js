@@ -6,8 +6,8 @@ const btnLogin1 = document.getElementById('btnlogin1');
 const btnLogin2 = document.getElementById('btnlogin2');
 const LoginBtnAcc = document.getElementById('loginaccount');
 const CreatBtnAcc = document.getElementById('creataccount');
-const signUpForm= document.getElementById('signupform');
-const loginForm = document.getElementById('loginform');
+const signUpForm = document.getElementById('signupform');
+const loginForm = document.querySelector('.loginform');
 if (menuBtn && side) {
     menuBtn.addEventListener('click', () => {
         side.classList.toggle('translate-x-full');
@@ -48,17 +48,18 @@ if(btnLogin2)
     });
 }
 
-if(LoginBtnAcc)
-{
-    LoginBtnAcc.addEventListener('click', ()=>{
-        signUpForm.classList.remove('hidden');
+
+if (LoginBtnAcc) {
+    LoginBtnAcc.addEventListener('click', () => {
         loginForm.classList.add('hidden');
+        signUpForm.classList.remove('hidden');
     });
 }
-if(CreatBtnAcc)
-{
-    CreatBtnAcc.addEventListener('click', ()=>{
-        loginForm.classList.remove('hidden');
+
+if (CreatBtnAcc) {
+    CreatBtnAcc.addEventListener('click', () => {
         signUpForm.classList.add('hidden');
+        loginForm.classList.remove('hidden');
     });
 }
+
