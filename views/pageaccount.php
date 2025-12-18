@@ -101,10 +101,10 @@
         </div>
 
         <div class="flex flex-col justify-center items-center
-                    w-full md:w-1/2 p-6 md:p-8
-                    bg-[#FEFCED] shadow-lg
+                    w-full md:w-1/2 p-5 md:p-8
+                    bg-[#FEFCED] shadow-lg rounded-[20px]
                     md:rounded-br-[20px] md:rounded-tr-[20px]
-                    h-[600px] gap-6">
+                    h-[600px] gap-3">
 
             <h1 class="text-[#0C0904] text-[40px] font-bold">Log-in</h1>
 

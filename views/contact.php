@@ -1,3 +1,10 @@
+<?php include __DIR__ . "/../controllers/conatctValidation.php"?>
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +15,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <title>NovaCraft</title>
 </head>
-<body>
-<?php include __DIR__ . "/../controllers/conatctValidation.php"?>
+<body class="h-screen flex flex-col justify-between">
 <?php include __DIR__ . "/../templates/header.php"?>
 <?php include __DIR__ . "/../templates/side-bar.php"?>
 <div class="contain p-10 flex flex-col items-center justify-center md:w-full md:justify-evenly gap-10 md:flex-row md:gap-15">

@@ -18,5 +18,4 @@
             header("location: /profile");
             exit;
         }
-        
     }
