@@ -30,7 +30,7 @@ include __DIR__ . "/../controllers/logout.php";
     <div class="display flex flex-col w-full">
         <nav class="flex flex-row items-center justify-evenly gap-5 mt-2">
             <a id="dash">Dashboard</a>
-            <a href="#">EMAILS</a>
+            <a id="email">EMAILS</a>
         </nav>
 
         <div class="display2">
@@ -41,6 +41,18 @@ include __DIR__ . "/../controllers/logout.php";
                     <div>
                         <h1><?= htmlspecialchars($us['fullname']) ?></h1>
                         <p><?= htmlspecialchars($us['email']) ?></p>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+
+
+            <div class="conatcttab hidden mt-5 flex flex-col items-center justify-center gap-4">
+                <?php foreach($Emails as $Em): ?>
+                <div class="user flex flex-col items-start justify-center gap-3 bg-gray-100 w-[90%] p-3 rounded-[20px]">
+                    <div class="flex flex-col items-start justify-center">
+                        <h1 class="text-black-500"><?= htmlspecialchars($Em['ffullname']) ?></h1>
+                        <p  class="text-black-500"><?= htmlspecialchars($Em['message']) ?></p>
                     </div>
                 </div>
                 <?php endforeach; ?>
