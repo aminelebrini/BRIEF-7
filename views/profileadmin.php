@@ -47,27 +47,33 @@ $Emails = $Emails ?? [];
             </div>
         </nav>
 
-        <div class="display2 md:col-start-2 md:row-end-4 md:row-start-1 md:row-end-4">
-            <div class="userstab hidden mt-5 flex flex-row items-center justify-center">
-                <?php foreach($UsersTab as $Ust): ?>
-                <div class="user flex flex-row items-center justify-start gap-3 bg-gray-100 w-[90%] p-3 rounded-[20px]">
-                    <img src="<?= htmlspecialchars($Ust['url']) ?>" class="w-[50px] h-[50px] rounded-[50%]" alt="userphoto">
-                    <div>
-                        <h1><?= htmlspecialchars($Ust['fullname']) ?></h1>
-                        <p><?= htmlspecialchars($Ust['email']) ?></p>
+        <div class="display2 md:col-start-2 md:row-start-1 md:row-span-4">
+            <div class="userstab hidden mt-5 flex flex-wrap items-center justify-center gap-4">
+
+                <?php foreach ($UsersTab as $Ust): ?>
+                    <div class="user flex flex-col items-center justify-center gap-3 
+                             w-[90%] md:w-[200px] 
+                             h-auto md:h-[200px] 
+                             p-3 rounded-[20px] bg-[#3C2877]">
+
+                     <img src="<?= htmlspecialchars($Ust['url']) ?>"
+                          class="md:w-[100px] md:h-[100px] border-[4px] border-white rounded-full"
+                          alt="userphoto">
+
+                        <div class="text-center text-white">
+                            <h1><?= htmlspecialchars($Ust['fullname']) ?></h1>
+                            <p class="text-sm"><?= htmlspecialchars($Ust['email']) ?></p>
+                        </div>
                     </div>
-                </div>
                 <?php endforeach; ?>
             </div>
-
             <div class="conatcttab hidden mt-5 flex flex-col items-center justify-center gap-4">
-                <?php foreach($Emails as $Em): ?>
-                <div class="user flex flex-col items-start justify-center gap-3 bg-gray-100 w-[90%] p-3 rounded-[20px]">
-                    <div class="flex flex-col items-start justify-center">
-                        <h1 class="text-black-500"><?= htmlspecialchars($Em['ffullname']) ?></h1>
-                        <p  class="text-black-500"><?= htmlspecialchars($Em['message']) ?></p>
+                <?php foreach ($Emails as $Em): ?>
+                    <div class="user flex flex-col items-start justify-center gap-3 
+                                bg-gray-100 w-[90%] p-3 rounded-[20px]">
+                        <h1><?= htmlspecialchars($Em['ffullname']) ?></h1>
+                        <p><?= htmlspecialchars($Em['message']) ?></p>
                     </div>
-                </div>
                 <?php endforeach; ?>
             </div>
         </div>
