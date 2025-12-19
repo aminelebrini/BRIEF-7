@@ -1,6 +1,10 @@
 <?php
 include __DIR__ . "/../controllers/profileDisplay.php";
 include __DIR__ . "/../controllers/logout.php";
+
+$Users = $Users ?? [];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -16,43 +20,27 @@ include __DIR__ . "/../controllers/logout.php";
 <body>
     <header class="bg-[#3C2877] p-3 flex flex-row items-center justify-between">
         <h1 class="text-[20px] text-white font-bold">NovaCraft</h1>
-
         <?php foreach($Users as $us): ?>
-        <div class="flex flex-row items-center justify-center gap-3">
-            <img src="<?= htmlspecialchars($us['url']) ?>" class="w-[40px] h-[40px] rounded-[50%]" alt="userphoto">
-            <form method="post">
-                <button type="submit" class="text-white" name="logout">Log-out</button>
-            </form>
-        </div>
+            <?php if($us['status'] === "user"): ?>
+                <div class="flex flex-row items-center justify-center gap-3">
+                    <img src="<?= htmlspecialchars($us['url']) ?>" class="w-[40px] h-[40px] rounded-[50%]" alt="userphoto">
+                    <form method="post">
+                        <button type="submit" class="text-white" name="logout">Log-out</button>
+                    </form>
+                </div>
+            <?php endif; ?>
         <?php endforeach; ?>
     </header>
 
-    <div class="display flex flex-col w-full">
-        <nav class="flex flex-row items-center justify-evenly gap-5 mt-2">
-            <a id="dash">Dashboard</a>
-            <a id="email">EMAILS</a>
-        </nav>
-
-        <div class="display2">
-            <div class="userstab hidden mt-5 flex flex-row items-center justify-center">
+    <div class="displayuser w-full">
+        <div class="display2user">
+            <div class="userstab mt-5 flex flex-row items-center justify-center">
                 <?php foreach($Users as $us): ?>
                 <div class="user flex flex-row items-center justify-start gap-3 bg-gray-100 w-[90%] p-3 rounded-[20px]">
                     <img src="<?= htmlspecialchars($us['url']) ?>" class="w-[50px] h-[50px] rounded-[50%]" alt="userphoto">
                     <div>
                         <h1><?= htmlspecialchars($us['fullname']) ?></h1>
                         <p><?= htmlspecialchars($us['email']) ?></p>
-                    </div>
-                </div>
-                <?php endforeach; ?>
-            </div>
-
-
-            <div class="conatcttab hidden mt-5 flex flex-col items-center justify-center gap-4">
-                <?php foreach($Emails as $Em): ?>
-                <div class="user flex flex-col items-start justify-center gap-3 bg-gray-100 w-[90%] p-3 rounded-[20px]">
-                    <div class="flex flex-col items-start justify-center">
-                        <h1 class="text-black-500"><?= htmlspecialchars($Em['ffullname']) ?></h1>
-                        <p  class="text-black-500"><?= htmlspecialchars($Em['message']) ?></p>
                     </div>
                 </div>
                 <?php endforeach; ?>

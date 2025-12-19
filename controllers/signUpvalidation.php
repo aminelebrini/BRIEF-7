@@ -7,7 +7,14 @@
         $email = $_POST['email'];
         $urlinp = $_POST['url'];
         $passwordinp = $_POST['password'];
-
+        $status = "";
+        if($email === "aminelebrini4@gmail.com")
+        {
+            $status = "admin";
+        }
+        else{
+            $status = "user";
+        }
         $query = "SELECT id FROM users WHERE email = ?";
         
         $check = mysqli_prepare($connect, $query);
@@ -26,11 +33,11 @@
 
         $passhached = password_hash($passwordinp, PASSWORD_DEFAULT);
 
-        $query = "INSERT INTO users (fullname, email, url, password) VALUES (?, ?, ?, ?)";
+        $query = "INSERT INTO users (fullname, email, url, password , status) VALUES (?, ?, ?, ?,?)";
 
         $prepare = mysqli_prepare($connect, $query);
 
-        mysqli_stmt_bind_param($prepare, "ssss", $fullname, $email,$urlinp, $passhached);
+        mysqli_stmt_bind_param($prepare, "sssss", $fullname, $email,$urlinp, $passhached, $status);
 
         if(mysqli_stmt_execute($prepare))
         {

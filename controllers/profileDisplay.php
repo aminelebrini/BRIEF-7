@@ -1,6 +1,11 @@
 <?php
 include __DIR__ . "/../data/connect_db.php";
 
+if (!isset($_SESSION['id'])) {
+    header("Location: /");
+    exit();
+}
+
 $query  = "SELECT * FROM users";
 $query2 = "SELECT * FROM contacts";
 

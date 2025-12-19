@@ -1,21 +1,32 @@
 <?php
-    include __DIR__ . "/../data/connect_db.php";
-    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signin']))
-    {
-        $email = $_POST['emaillog'];
-        $passwordlogi = $_POST['passwordlog'];
+session_start();
+include __DIR__ . "/../data/connect_db.php";
 
-        $query = "SELECT * FROM users WHERE email = ?";
-        $declar = mysqli_prepare($connect, $query);
-        mysqli_stmt_bind_param($declar, "s", $email);
-        mysqli_stmt_execute($declar);
-        $resul = mysqli_stmt_get_result($declar);
-        $user = mysqli_fetch_assoc($resul);
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signin'])) {
 
-        if($user && password_verify($passwordlogi, $user['password']))
+    $email = $_POST['emaillog'];
+    $passwordlogi = $_POST['passwordlog'];
+
+    $query = "SELECT * FROM users WHERE email = ?";
+    $stmt = mysqli_prepare($connect, $query);
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $user = mysqli_fetch_assoc($result);
+
+    if ($user && password_verify($passwordlogi, $user['password'])) {
+
+        $_SESSION['id'] = $user['id'];
+        $_SESSION['user'] = $user;
+
+        if($_SESSION['status'] === 'admin')
         {
-            $_SESSION['user'] = $user;
-            header("location: /profile");
-            exit;
+            header("Location: /profileadmin");
+            exit();
+        }else{
+            header("Location: /profileuser");
+            exit();
         }
     }
+}
+?>
