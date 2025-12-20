@@ -1,10 +1,10 @@
 <?php
 
-$host = "127.0.0.1";
-$username = "root";
-$serverpass = "123456";
-$port = "3306";
-$data_base = "novacraft";
+$host = "";
+$username = "";
+$serverpass = "";
+$port = "";
+$data_base = "";
 $status = "";
 $connect = mysqli_connect($host, $username, $serverpass, $data_base, $port);
 
