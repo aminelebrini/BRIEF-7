@@ -7,20 +7,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>NovaCraft</title>
 </head>
-<body>
+<body class="flex flex-col justify-between min-h-screen w-full">
 <?php include __DIR__ . "/../templates/header.php"?>
 <div class="flex flex-col md:flex-row md:items-center md:justify-around md:w-[90%] md:h-[81vh] gap-5 py-10 mx-auto">
     <?php include __DIR__ . "/../templates/side-bar.php"?>
-    <div class="w-[100%] flex flex-col justify-center items-center">
-        <h1 class="text-[40px] font-bold">About Us</h1>
-        <p class="w-[95%] text-[25px]">At NovaCraft Studio, we bring ideas to life through innovative design. As a full-service graphic and UI/UX design agency, we specialize in creating visually stunning and user-friendly experiences that connect brands with their audiences.<br>
+    <div class="w-[100%] flex flex-col justify-center items-center md:items-start">
+        <h1 class="text-[40px] md:text-[70px] font-bold text-[#3C2877]">About Us</h1>
+        <p class="w-[90%] text-[25px] text-[#3C2877] font-100">At NovaCraft Studio, we bring ideas to life through innovative design. As a full-service graphic and UI/UX design agency, we specialize in creating visually stunning and user-friendly experiences that connect brands with their audiences.<br>
         Our team of creative professionals combines artistic vision with strategic thinking to deliver designs that not only look amazing but also drive engagement and results. From building a cohesive brand identity to crafting intuitive digital interfaces, we are dedicated to helping businesses stand out in today’s competitive market.<br>
         At NovaCraft Studio, design is more than just aesthetics—it’s about creating meaningful experiences that leave a lasting impression.</p>
     </div>
-    <img src="../images/—Pngtree—vector about us images_16023330.png" class="md:w-[450px] md:h-[450px]" alt="bg">
+    <img src="https://img.freepik.com/premium-vector/about-us_773186-1363.jpg?semt=ais_hybrid&w=740&q=80" class="md:w-[600px] md:h-[450px]" alt="bg">
 </div>
-<?php include __DIR__ . "/../templates/footer.php" ?>
+    <?php include __DIR__ . "/../templates/footer.php" ?>
     <script src="/Scripts/script.js"></script>
-
 </body>
 </html>

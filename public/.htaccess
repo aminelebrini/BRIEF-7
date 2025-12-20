@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Ne pas réécrire logout.php
+RewriteCond %{REQUEST_URI} !^/controllers/logout\.php$
+
+# Ne pas réécrire si c’est un vrai fichier ou dossier
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^ index.php [QSA,L]
