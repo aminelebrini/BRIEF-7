@@ -30,13 +30,13 @@
 <?php include __DIR__ . "/../templates/header.php"?>
 <?php include __DIR__ . "/../templates/side-bar.php"?>
 <div class="w-full flex flex-col items-center justify-center gap-10 py-10 h-full md:h-[81vh]">
-    <h1 class="text-4xl font-bold text-center">Our Services</h1>
+    <h1 class="text-4xl font-bold text-center text-[#3C2877]">Our Services</h1>
     <div class="w-full flex flex-col items-center justify-center flex-wrap md:flex-row md:flex-wrap gap-5">
         <?php foreach($Services as $serv) { ?>
-            <div class="flex flex-col justify-center items-center p-5 shadow-lg rounded-lg bg-white max-w-[300px]">
-                <i class="<?= $serv['icon'] ?> text-indigo-500 text-3xl"></i>
-                <h2 class="text-xl font-medium mt-2"><?= $serv['title'] ?></h2>
-                <p class="mt-2 text-center"><?= $serv['text'] ?></p>
+            <div class="flex flex-col justify-center items-center p-5 shadow-lg rounded-lg bg-[#3C2877] max-w-[300px]">
+                <i class="<?= $serv['icon'] ?> text-indigo-500 text-3xl text-white"></i>
+                <h2 class="text-xl font-medium mt-2 text-white"><?= $serv['title'] ?></h2>
+                <p class="mt-2 text-center text-white"><?= $serv['text'] ?></p>
             </div>
         <?php } ?>
     </div>

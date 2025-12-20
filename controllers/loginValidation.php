@@ -19,15 +19,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signin'])) {
         $_SESSION['id'] = $user['id'];
         $_SESSION['user'] = $user;
       
-            if ($user['status'] === 'admin') {
+            if ($user['status'] === 'Admin') {
                 $_SESSION['user'] = $user;
                 header("Location: /profileadmin");
             
-            } else {
+            } elseif ($user['status'] === 'User') {
                 $_SESSION['user'] = $user;
                 header("Location: /profileuser");
+                exit();
             }
     }
-
 }
 ?>
