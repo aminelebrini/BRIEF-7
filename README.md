@@ -15,19 +15,21 @@ Ce projet consiste à migrer un site dynamique stateless vers une application PH
 
 ## 📂 Structure du projet
 
-novacraft/
+BRIEF-7/
 │
-├─ public/ # Point d'entrée (Front Controller)
-│ └─ styles
-      └─ style.css
-│ └─ Scripts
-      └─ script.js
-│ └─ index.php
-├─ controllers/ # Contrôleurs PHP
-├─ views/ # Templates HTML/PHP
-├─ data/ # Fichier de connexion DB et schema.sql
-├─ .htaccess # Configuration pour URLs propres
+├─ public/                  # Point d'entrée (Front Controller)
+│  ├─ styles/
+│  │   └─ style.css
+│  ├─ scripts/
+│  │   └─ script.js
+│  └─ index.php
+│
+├─ controllers/             # Contrôleurs PHP
+├─ views/                   # Templates HTML/PHP
+├─ data/                    # Fichier de connexion DB et schema.sql
+├─ .htaccess                # Configuration pour URLs propres
 └─ README.md
+
 
 
 
