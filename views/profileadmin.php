@@ -76,25 +76,33 @@ $Emails = $Emails ?? [];
             </div>
         </div>
 
-        <div class="display3 hidden w-full md:h-screen md:mt-4 md:col-start-3 md:col-end-4">
-            <div class="bg-[url('https://img.freepik.com/premium-vector/geometric-gradient-technology-background_23-2149110132.jpg?semt=ais_hybrid&w=740&q=80')] relative h-48 md:h-[35vh] md:w-[85vw] bg-cover bg-center rounded-[20px]">
-                <div class="absolute inset-0 bg-black/30 rounded-[20px]"></div>
-                    <div class="relative h-full flex flex-row items-center gap-6 px-6">
-                        <img src="<?= htmlspecialchars($Users['url']) ?>" class="w-24 h-24 md:w-40 md:h-40 rounded-full object-cover" alt="userphoto">
-                        <div class="info flex flex-col items-start justify-evenly gap-[0px] md:w-full">
-                            <h1 class="text-white md:text-[40px] font-bold"> <?= htmlspecialchars($Users['fullname']) ?></h1>
-                            <p class="text-white md:text-[20px]"> <?= htmlspecialchars($Users['email']) ?></p>
-                        </div>
-                        <div class="md:w-[40%] flex flex-col items-start justify-center">
-                            <h1 class="text-[40px] text-white font-bold">Created At:</h1>
-                            <p class="text-white"><?= htmlspecialchars($Users['created_at']) ?></p>
-                            <h1 class="text-[40px] text-white font-bold">Status:</h1>
-                            <p class="text-white md:text-[20px]"> <?= htmlspecialchars($Users['status']) ?></p>
-                        </div>
+        <div class="display3 hidden w-full md:h-screen md:mt-4 mt-2 ml-2 md:col-start-3 md:col-end-4 row-start-2">
+            <div class="relative bg-[url('https://img.freepik.com/premium-vector/geometric-gradient-technology-background_23-2149110132.jpg?semt=ais_hybrid&w=740&q=80')] w-[95%] md:w-[85vw] h-64 md:h-[35vh] bg-cover bg-center rounded-2xl">
+            <div class="absolute inset-0 bg-black/30 rounded-2xl"></div>
+            <div class="absolute inset-0 h-full flex flex-col md:flex-row items-center justify-between gap-1 px-6 py-4">  
+                <img src="<?= htmlspecialchars($Users['url']) ?>" class="w-[100px] h-[100px] md:w-[150px] md:h-[150px] rounded-full object-cover border-2 border-white" alt="userphoto">
+                <div class="flex flex-col items-start justify-center gap-1 md:w-1/2">
+                    <h1 class="text-white text-xl md:text-4xl font-bold"><?= htmlspecialchars($Users['fullname']) ?></h1>
+                    <p class="text-white text-sm md:text-xl"><?= htmlspecialchars($Users['email']) ?></p>
+                    <div class="online flex flex-row items-center justify-evenly gap-3">
+                        <div class="w-[14px] h-[14px] rounded-full bg-green-600"></div>
+                        <h1 class="text-white">Available</h1>
                     </div>
                 </div>
+                <div class="flex flex-row md:flex-col items-start justify-between gap-3 w-full md:w-1/3 text-white">
+                    <div class="flex flex-col items-start">
+                        <h2 class="text-sm md:text-[40px] font-bold">Created At:</h2>
+                        <p class="text-xs md:text-[30px]"><?= htmlspecialchars($Users['created_at']) ?></p>
+                    </div>
+                    <div class="flex flex-col items-start">
+                        <h2 class="text-sm md:text-[40px] font-bold">Status:</h2>
+                        <p class="text-xs md:text-[30px]"><?= htmlspecialchars($Users['status']) ?></p>
+                    </div>
+                </div>
+
             </div>
-        </div>   
+        </div>
+    </div>   
     <script src="/Scripts/script.js"></script>
 </body>
 </html>
