@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>NovaCraft</title>
 </head>
-<body>
+<body class="flex flex-col justify-between min-h-screen w-full">
 <?php include __DIR__ . "/../templates/header.php"?>
 <div class="flex flex-col md:flex-row md:items-center md:justify-around md:w-[90%] md:h-[81vh] gap-5 py-10 mx-auto">
     <?php include __DIR__ . "/../templates/side-bar.php"?>
