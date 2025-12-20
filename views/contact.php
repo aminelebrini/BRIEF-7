@@ -1,9 +1,4 @@
 <?php include __DIR__ . "/../controllers/conatctValidation.php"?>
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,34 +14,52 @@ error_reporting(E_ALL);
 <?php include __DIR__ . "/../templates/header.php"?>
 <?php include __DIR__ . "/../templates/side-bar.php"?>
 <div class="contain p-10 flex flex-col items-center justify-center md:w-full md:justify-evenly gap-10 md:flex-row md:gap-15">
-    <div class="left-contain md:w-full flex flex-col items-center justify-center text-center md:text-left">
-        <h1 class="text-[30px] font-bold md:text-left">Contact Us</h1>
-        <p class="text-[20px] text-center md:text-left">Have a project in mind or just want to say hello? Fill out the form, and our team at NovaCraft Studio will respond promptly.<br>
-        We’re excited to hear from you and bring your ideas to life!</p>
+    <div class="md:w-full flex flex-col items-center justify-evenly md:gap-[20px] text-center md:text-left p-6 md:p-0">
+    <h1 class="text-[50px] md:text-[80px] font-bold text-[#3C2877]">Contact Us</h1>
+    <p class="text-[16px] md:text-[30px] text-[#3C2877] max-w-[900px]">
+        Have a project in mind or just want to say hello? Fill out the form, and our team at NovaCraft Studio will respond promptly.<br>
+        We’re excited to hear from you and bring your ideas to life!
+    </p>
     </div>
-    <div class="right-contain w-full flex flex-col items-center justify-center gap-10">
-        <h2 class="text-[30px] font-bold">Contact Us</h2>
-        <form method="POST" class="w-full flex flex-col gap-5">
-            <div  class="flex flex-col">
-                <label for="fullname" class="text-[18px]">FULL NAME</label>
-                <input class="border-[3px] rounded-[10px] p-[15px]" name="name" type="text" id="fullname" placeholder="FULL NAME"/>
-                <p><?= $nameErr; ?></p>
-            </div>
-            <div  class="flex flex-col">
-                <label for="email" class="text-[18px]">EMAIL</label>
-                <input class="border-[3px] rounded-[10px] p-[15px]" name="email" type="text" id="email" placeholder="EMAIL"/>
-                <p><?= $emailErr ?></p>
-            </div>
-            <div  class="flex flex-col">
-                <label for="message" class="text-[18px]">MESSAGE</label>
-                <textarea class="h-[200px] border-[3px] rounded-[10px] p-[15px] resize-none" name="message" type="text" id="message" placeholder="MESSAGE"></textarea>
-                <p><?= $messageErr ?></p>
-            </div>
-            <div class="sub w-full flex flex-row items-center justify-center md:justify-end">
-                <button type="submit" class="border-2 w-[200px] h-[50px] rounded-[10px] hover:bg-gray-900 hover:text-white hover:transition-all hover:duration-500 hover:ease-in-out">SEND</button>
-            </div>
-        </form>
-    </div>
+
+    <div class="w-full flex flex-col items-center justify-center gap-10 p-6 rounded-[20px] md:w-full mx-auto">
+
+    <form method="POST" class="w-full max-w-2xl flex flex-col gap-5">
+        <div class="flex flex-col">
+            <label for="fullname" class="text-base sm:text-lg md:text-xl font-medium">FULL NAME</label>
+            <input 
+                class="border-2 border-[#3C2877] rounded-lg p-3 sm:p-4 focus:outline-none focus:ring-2 focus:ring-[#3C2877]" 
+                name="name" type="text" id="fullname" placeholder="FULL NAME"/>
+            <p class="text-red-500 text-sm mt-1"><?= $nameErr; ?></p>
+        </div>
+
+        <div class="flex flex-col">
+            <label for="email" class="text-base sm:text-lg md:text-xl font-medium">EMAIL</label>
+            <input 
+                class="border-2 border-[#3C2877] rounded-lg p-3 sm:p-4 focus:outline-none focus:ring-2 focus:ring-[#3C2877]" 
+                name="email" type="email" id="email" placeholder="EMAIL"/>
+            <p class="text-red-500 text-sm mt-1"><?= $emailErr ?></p>
+        </div>
+
+        <div class="flex flex-col">
+            <label for="message" class="text-base sm:text-lg md:text-xl font-medium">MESSAGE</label>
+            <textarea 
+                class="border-2 border-[#3C2877] rounded-lg p-3 sm:p-4 resize-none h-40 sm:h-48 focus:outline-none focus:ring-2 focus:ring-[#3C2877]" 
+                name="message" id="message" placeholder="MESSAGE"></textarea>
+            <p class="text-red-500 text-sm mt-1"><?= $messageErr ?></p>
+        </div>
+
+        <div class="flex flex-row w-full justify-center md:justify-end">
+            <button 
+                type="submit" 
+                class="border-2 border-[#3C2877] w-40 h-12 rounded-lg text-[#3C2877] font-semibold 
+                       hover:bg-[#3C2877] hover:text-white transition-all duration-300 ease-in-out">
+                SEND
+            </button>
+        </div>
+    </form>
+</div>
+
 </div>
     <?php include __DIR__ . "/../templates/footer.php" ?>
     <script src="/Scripts/script.js"></script>
