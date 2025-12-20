@@ -32,13 +32,10 @@ $Users = $_SESSION['user'];
     </header>
 
     <div class="flex flex-col items-center justify-center mt-7 md:mt-4 w-full">
-    <div class="relative w-[95%] md:w-[95vw] h-64 md:h-[35vh] bg-cover bg-center rounded-2xl"
-         style="background-image: url('https://img.freepik.com/premium-vector/geometric-gradient-technology-background_23-2149110132.jpg?semt=ais_hybrid&w=740&q=80')">
+    <div class="relative bg-[url('https://img.freepik.com/premium-vector/geometric-gradient-technology-background_23-2149110132.jpg?semt=ais_hybrid&w=740&q=80')] w-[95%] md:w-[95vw] h-64 md:h-[35vh] bg-cover bg-center rounded-2xl">
         
         <div class="absolute inset-0 bg-black/30 rounded-2xl"></div>
-        
-        <div class="absolute inset-0 h-full flex flex-col md:flex-row items-center justify-between gap-1 px-6 py-4">
-            
+        <div class="absolute inset-0 h-full flex flex-col md:flex-row items-center justify-between gap-1 px-6 py-4">  
             <img src="<?= htmlspecialchars($Users['url']) ?>" 
                  class="w-[100px] h-[100px] md:w-[150px] md:h-[150px] rounded-full object-cover border-2 border-white" 
                  alt="userphoto">
@@ -46,6 +43,10 @@ $Users = $_SESSION['user'];
             <div class="flex flex-col items-start justify-center gap-1 md:w-1/2">
                 <h1 class="text-white text-xl md:text-4xl font-bold"><?= htmlspecialchars($Users['fullname']) ?></h1>
                 <p class="text-white text-sm md:text-xl"><?= htmlspecialchars($Users['email']) ?></p>
+                <div class="online flex flex-row items-center justify-evenly gap-3">
+                    <div class="w-[14px] h-[14px] rounded-full bg-green-600"></div>
+                    <h1 class="text-white">Available</h1>
+                </div>
             </div>
             
             <div class="flex flex-row md:flex-col items-start justify-between gap-3 w-full md:w-1/3 text-white">
